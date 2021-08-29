@@ -337,8 +337,7 @@ body.lock {
   .hero__input {
     -webkit-box-flex: 1;
     -ms-flex: 1 0 auto;
-    flex: 1 0 auto;
-    max-width: 187px; } }
+    flex: 1 0 auto; } }
 
 .hero__input::-webkit-input-placeholder {
   font-family: Fira Sans;
@@ -392,8 +391,7 @@ body.lock {
     .hero__btn {
       -webkit-box-flex: 0;
       -ms-flex: 0 0 75px;
-      flex: 0 0 75px;
-      max-width: calc(100% - 75px); } }
+      flex: 0 0 75px; } }
   .hero__btn span {
     font-family: Fira Sans;
     font-style: normal;
@@ -837,9 +835,8 @@ body.lock {
   @media (max-width: 767px) {
     .messages__input {
       -webkit-box-flex: 1;
-      -ms-flex: 1 0 auto;
-      flex: 1 0 auto;
-      max-width: 180px; } }
+      -ms-flex: 1 1 auto;
+      flex: 1 1 auto; } }
   .messages__input::-webkit-input-placeholder {
     font-family: Fira Sans;
     font-style: normal;
@@ -887,7 +884,8 @@ body.lock {
       .messages__btn {
         -webkit-box-flex: 0;
         -ms-flex: 0 0 75px;
-        flex: 0 0 75px; } }
+        flex: 0 0 75px;
+        max-width: 75px; } }
     .messages__btn span {
       font-family: Fira Sans;
       font-style: normal;

@@ -1,5 +1,9 @@
+@charset "UTF-8";
 :root {
   font-size: 16px; }
+
+body {
+  font-family: Fira Sans; }
 
 body.lock {
   overflow: hidden; }
@@ -132,7 +136,9 @@ body.lock {
         transition: -webkit-transform .3s linear 0s;
         -o-transition: transform .3s linear 0s;
         transition: transform .3s linear 0s;
-        transition: transform .3s linear 0s, -webkit-transform .3s linear 0s; }
+        transition: transform .3s linear 0s, -webkit-transform .3s linear 0s;
+        min-height: 100vh;
+        overflow: hidden; }
         .header__navigation.active {
           -webkit-transform: translate(0, 0);
           -ms-transform: translate(0, 0);
@@ -366,6 +372,7 @@ body.lock {
   color: #B2B2B2; }
 
 .hero__btn {
+  display: inline-block;
   background-color: #1A75E8;
   padding: 15px 30px;
   display: -webkit-box;
@@ -377,14 +384,14 @@ body.lock {
   border-radius: .5rem; }
   @media (min-width: 768px) {
     .hero__btn {
-      -webkit-box-flex: 1;
-      -ms-flex: 1 0 211px;
-      flex: 1 0 211px; } }
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 211px;
+      flex: 0 0 211px; } }
   @media (max-width: 767px) {
     .hero__btn {
-      -webkit-box-flex: 1;
-      -ms-flex: 1 0 70;
-      flex: 1 0 70; } }
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 75px;
+      flex: 0 0 75px; } }
   .hero__btn span {
     font-family: Fira Sans;
     font-style: normal;
@@ -714,7 +721,22 @@ body.lock {
     border-radius: .314rem;
     cursor: pointer; }
   .offers .item__link-more {
-    color: #1A75E8; }
+    position: relative;
+    color: #1A75E8;
+    padding-right: 20px; }
+    .offers .item__link-more::after {
+      content: '→';
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      right: 0;
+      font-family: Fira Sans;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 17px; }
 
 .offers__btn-more {
   position: relative;
@@ -742,40 +764,194 @@ body.lock {
       -ms-transform: translateX(-50%);
       transform: translateX(-50%); } }
 
-.messages__body {
-  margin: 0 auto; }
-  @media (min-width: 768px) {
-    .messages__body {
-      max-width: 460px; } }
+.messages {
+  margin-bottom: 160px; }
   @media (max-width: 767px) {
-    .messages__body {
-      max-width: 280px; } }
-
-.messages__title {
-  text-align: center;
-  color: #111238; }
+    .messages {
+      margin: 0 0 120px 0; } }
+  .messages__body {
+    margin: 0 auto; }
+    @media (min-width: 768px) {
+      .messages__body {
+        max-width: 460px; } }
+    @media (max-width: 767px) {
+      .messages__body {
+        max-width: 280px; } }
+  .messages__title {
+    text-align: center;
+    color: #111238; }
+    @media (min-width: 768px) {
+      .messages__title {
+        font-family: Fira Sans;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 36px;
+        line-height: 43px; } }
+    @media (max-width: 767px) {
+      .messages__title {
+        font-family: Fira Sans;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 24px;
+        line-height: 29px;
+        text-align: center; } }
+  .messages__subtitle {
+    text-align: center;
+    color: #111238;
+    margin: 20px 0 40px 0;
+    font-family: Fira Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 140%; }
+  .messages__btn-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .messages__input-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background: #FFFFFF;
+    border: 1px solid rgba(214, 50, 50, 0.1);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-shadow: 0px 4px 25px rgba(15, 17, 56, 0.1);
+    box-shadow: 0px 4px 25px rgba(15, 17, 56, 0.1);
+    border-radius: .5rem;
+    padding: 10px 10px 10px 25px;
+    margin-bottom: 50px; }
   @media (min-width: 768px) {
-    .messages__title {
+    .messages__input {
+      -webkit-box-flex: 1;
+      -ms-flex: 1 0 200px;
+      flex: 1 0 200px; } }
+  @media (max-width: 767px) {
+    .messages__input {
+      -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+      flex: 1 0 auto; } }
+  .messages__input::-webkit-input-placeholder {
+    font-family: Fira Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #B2B2B2; }
+  .messages__input:-ms-input-placeholder {
+    font-family: Fira Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #B2B2B2; }
+  .messages__input::-ms-input-placeholder {
+    font-family: Fira Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #B2B2B2; }
+  .messages__input::placeholder {
+    font-family: Fira Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #B2B2B2; }
+  .messages__btn {
+    background-color: #1A75E8;
+    padding: 15px 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: .5rem; }
+    @media (min-width: 768px) {
+      .messages__btn {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 181px;
+        flex: 0 0 181px; } }
+    @media (max-width: 767px) {
+      .messages__btn {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 75px;
+        flex: 0 0 75px; } }
+    .messages__btn span {
       font-family: Fira Sans;
       font-style: normal;
-      font-weight: 900;
-      font-size: 36px;
-      line-height: 43px; } }
-  @media (max-width: 767px) {
-    .messages__title {
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 19px;
+      color: #fff;
+      padding-left: 10px; }
+      @media (min-width: 768px) {
+        .messages__btn span {
+          display: block; } }
+      @media (max-width: 767px) {
+        .messages__btn span {
+          display: none; } }
+
+.footer {
+  margin-bottom: 100px; }
+  .footer__body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start; }
+    @media (max-width: 767px) {
+      .footer__body {
+        display: block;
+        max-width: 166px;
+        margin: 0 auto;
+        text-align: center; } }
+  .footer__logo {
+    width: 166px; }
+    .footer__logo img {
+      margin-bottom: 20px; }
+    .footer__logo-caption {
       font-family: Fira Sans;
       font-style: normal;
-      font-weight: 900;
-      font-size: 24px;
-      line-height: 29px;
-      text-align: center; } }
-
-.messages__subtitle {
-  text-align: center;
-  color: #111238;
-  margin: 20px 0 40px 0;
-  font-family: Fira Sans;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 140%; }
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 140%;
+      color: #B2B2B2; }
+  .footer__title {
+    font-family: Fira Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    color: #111238;
+    margin-bottom: 15px; }
+  .footer__subtitle {
+    font-family: Fira Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px; }
+  .footer__connection .footer__subtitle + .footer__subtitle {
+    margin-top: 10px; }
+  .footer__info .footer__subtitle + .footer__subtitle {
+    margin-top: 10px; }
+  .footer__nav .footer__subtitle + .footer__subtitle {
+    margin-top: 10px; }
+  @media (max-width: 767px) {
+    .footer__connection {
+      margin: 30px 0 30px 0; } }
+  @media (max-width: 767px) {
+    .footer__info {
+      margin: 0 0 30px 0; } }

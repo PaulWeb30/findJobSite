@@ -5,4 +5,8 @@ headerBurger.addEventListener('click', function() {
   this.classList.toggle('active');
   headerNav.classList.toggle('active');
   body.classList.toggle('lock');
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  })
 })

@@ -337,8 +337,7 @@ body.lock {
   .hero__input {
     -webkit-box-flex: 1;
     -ms-flex: 1 0 auto;
-    flex: 1 0 auto;
-    max-width: calc(100% - 75px); } }
+    flex: 1 0 auto; } }
 
 .hero__input::-webkit-input-placeholder {
   font-family: Fira Sans;
